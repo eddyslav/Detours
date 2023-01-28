@@ -1,0 +1,13 @@
+﻿{% assign firstName = UserName | split: " " | first %}
+
+{% layout "baseEmail.liquid" %}
+
+{% section title %}Welcome to Detours family!{% endsection %}
+
+{% section content %}
+<p>Hi, {{ firstName }}</p>
+<p>Welcome to Detours, we're glad to have you 🎉🙏</p>
+<p>We're all a big familiy here, so make sure to upload your user photo so we get to know you a bit better!</p>
+<p>If you need any help with booking your next tour, please don't hesitate to contact me!</p>
+<p>- Sviatoslav Vladyka, CEO</p>
+{% endsection %}

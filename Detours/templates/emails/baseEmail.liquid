@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{% rendersection title %}</title>
+
+        {% include "_style" %}
+    </head>
+    <body>
+        <table class="body" role="presentation" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td class="container">
+                        <div class="content">
+                            <table class="main" role="presentation">
+                                <tbody>
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            {% rendersection content %}
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                                  
+                                </tbody>
+                                          
+
+                                <div class="footer">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="content-block">
+                                                    <span class="apple-link">Detours Inc, 123 Nowhere Road, Kyiv, Ukraine</span>
+                                                    <br>
+                                                    |  Don't like these emails? 
+                                                    <a href="#">Unsubscribe</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </table>
+                        </div>
+                     </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
