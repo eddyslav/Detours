@@ -115,6 +115,8 @@ public sealed class DetoursDbContext : DbContext
 
 			e.Property(x => x.Price)
 				.HasColumnType("money");
+
+			e.HasQueryFilter(x => x.IsActive == true);
 		});
 
 		modelBuilder.Entity<Booking>(e =>

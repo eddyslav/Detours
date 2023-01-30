@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Detours.Data.Migrations
 {
 	[DbContext(typeof(DetoursDbContext))]
-	[Migration("20221222100048_InitialCreate")]
+	[Migration("20230130083512_InitialCreate")]
 	partial class InitialCreate
 	{
 		/// <inheritdoc />
@@ -130,6 +130,9 @@ namespace Detours.Data.Migrations
 
 					b.Property<int>("Duration")
 						.HasColumnType("int");
+
+					b.Property<bool>("IsActive")
+						.HasColumnType("bit");
 
 					b.Property<int>("MaxGroupSize")
 						.HasColumnType("int");

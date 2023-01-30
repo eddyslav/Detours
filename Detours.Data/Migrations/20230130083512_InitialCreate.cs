@@ -32,6 +32,7 @@ namespace Detours.Data.Migrations
 					Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
 					Name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
 					Slug = table.Column<string>(type: "nvarchar(450)", nullable: false),
+					IsActive = table.Column<bool>(type: "bit", nullable: false),
 					Duration = table.Column<int>(type: "int", nullable: false),
 					MaxGroupSize = table.Column<int>(type: "int", nullable: false),
 					Difficulty = table.Column<int>(type: "int", nullable: false),

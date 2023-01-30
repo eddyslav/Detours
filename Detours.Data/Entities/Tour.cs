@@ -13,6 +13,8 @@ public class Tour : Entity
 	
 	public string Slug { get; init; } = default!;
 
+	public bool IsActive { get; set; } = true;
+
 	public int Duration { get; init; }
 	
 	public int MaxGroupSize { get; init; }
