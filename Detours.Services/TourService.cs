@@ -225,7 +225,18 @@ public class TourService : ITourService
 			throw new ServiceArgumentException($"Tour with id {tourId} does not exist");
 		}
 
-		_dbContext.Tours.Remove(tour);
+		var anyBookings = await _dbContext.Bookings
+			.AnyAsync(x => x.TourId == tour.Id, cancellationToken);
+
+		if (anyBookings)
+		{
+			tour.IsActive = false;
+		}
+		else
+		{
+			_dbContext.Tours.Remove(tour);
+		}
+
 		await _dbContext.SaveChangesAsync(cancellationToken);
 	}
 }

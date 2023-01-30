@@ -24,10 +24,11 @@ public class InternalToursController : BaseController
 	}
 
 	[HttpDelete("{tourId:guid}")]
-	public async Task DeleteTourByIdAsync([FromRoute] Guid tourId
+	public async Task<IActionResult> DeleteTourByIdAsync([FromRoute] Guid tourId
 		, CancellationToken cancellationToken)
 	{
 		await _service.DeleteTourByIdAsync(tourId, cancellationToken);
+		return NoContent();
 	}
 
 	[HttpPost]
